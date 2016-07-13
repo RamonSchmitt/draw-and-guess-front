@@ -2,11 +2,7 @@ import React from 'react'
 import Choice from '../components/choice'
 
 class Assignment extends React.Component {
-// constructor(props) {
-//   super(props)
-//
-//
-// }
+
   renderDrawAssignment() {
       return (
         <div>
@@ -15,15 +11,15 @@ class Assignment extends React.Component {
     );
   }
 
-  // renderguessChoices() {
-  //   return (
-  //     <div>
-  //       {this.props.guessChoices.map((choice) =>{
-  //         return <Choice key={choice._id} { ...choice } />
-  //       })}
-  //     </div>
-  //   );
-  // }
+  renderguessChoices() {
+    return (
+      <div>
+        {this.props.guesserAnswers.map((choice) =>{
+          return <Choice key={choice._id} { ...choice } />
+        })}
+      </div>
+    );
+  }
 
 
 
@@ -35,12 +31,9 @@ class Assignment extends React.Component {
     if (player1 === true) {
       return this.renderDrawAssignment();
 
-    // } return this.renderguessChoices();
-  } alert("faekof")
+    } return this.renderguessChoices();
 
   }
-
-
 
 }
 

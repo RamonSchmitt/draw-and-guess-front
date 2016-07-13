@@ -8,13 +8,13 @@ class App extends React.Component {
     this.state = {
       player1: null,
       player2: null,
-      player1Draw: true,
+      player1Draw: false,
       player2Draw: false,
       score: 0,
       roundTime: 20,
       round: 0,
       drawAssignment: "Dog",
-      guessChoices: [
+      guesserChoices: [
         { answer: "Cat" },
         { answer: "Dog" },
         { answer: "Rabbit" },
@@ -32,7 +32,7 @@ class App extends React.Component {
 
     render() {
         return (
-          <Assignment draw={this.state.player1Draw} assignment={this.state.drawAssignment}/>
+          <Assignment draw={this.state.player1Draw} assignment={this.state.drawAssignment} guesserAnswers={this.state.guesserChoices}/>
         );
     }
 }
