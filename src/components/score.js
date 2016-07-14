@@ -3,9 +3,9 @@ import React from 'react';
 class Score extends React.Component {
     render() {
         return (
-          <div>
-            <h1>Score</h1>
-          </div>
+          <span style={{textAlign: "right"}}>
+            Score
+          </span>
         );
     }
 }

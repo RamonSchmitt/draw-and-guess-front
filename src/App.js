@@ -1,6 +1,7 @@
 import React from 'react';
 import CanvasCont from './containers/canvas-cont';
-import Round from './containers/round'
+import Header from './components/header';
+import Round from './containers/round';
 
 class App extends React.Component {
   constructor() {
@@ -19,37 +20,16 @@ class App extends React.Component {
         { option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
         { option: "Rabbit", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
         { option: "Horse", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
-
       ]
     };
   }
 
-  // generateAnswer() {
-  //   let possibleAnswers = this.state.options
-  //   let newAnswer = possibleAnswers[Math.floor(Math.random()*possibleAnswers.length)];
-  //
-  //   this.setState({
-  //     answer: newAnswer,
-  //     beginRound: true
-  //   })
-  //   console.log(this.state.answer)
-  //
-  // }
-
-  // renderAnswer() {
-  //   return (
-  //     <div>
-  //       {this.state.answer.map((roundAnswer) => {
-  //         return <Answer key={roundAnswer._id} data={roundAnswer} />
-  //       })}
-  //     </div>
-  //   )
-  // }
 
   startGame(event) {
     event.preventDefault();
     let possibleAnswers = this.state.options
     let newAnswer = possibleAnswers[Math.floor(Math.random()*possibleAnswers.length)];
+
 
 
 
@@ -69,9 +49,18 @@ class App extends React.Component {
       if (this.state.beginRound == false) {
         return <button onClick={this.startGame.bind(this)}> Start Game </button>
 
-      } return <Round roundChoices={this.state.options}/>
+      } return (
+
+      <div>
+        <Header/>
+        <CanvasCont/>
+        <Round roundChoices={this.state.options}/>
+      </div>
 
       console.log("Begin Round = ", this.state.beginRound, "Answer", this.state.answer )
+    )
+
+
 
     }
 
