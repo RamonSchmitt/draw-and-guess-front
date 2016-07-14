@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import CanvasCont from './containers/canvas-cont';
-||||||| merged common ancestors
-=======
-import Round from './containers/round'
->>>>>>> a885641c4da4904d7b5ff9779df4ff16ba1f0a74
+import Header from './components/header';
+import Round from './containers/round';
 
 class App extends React.Component {
   constructor() {
@@ -24,12 +21,7 @@ class App extends React.Component {
         { option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
         { option: "Rabbit", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
         { option: "Horse", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
-
       ]
-
-
-
-
     };
 
     console.log(this.state)
@@ -38,14 +30,11 @@ class App extends React.Component {
 
     render() {
         return (
-<<<<<<< HEAD
-            <h1>Hello World!</h1>
+          <div>
+            <Header/>
             <CanvasCont/>
-||||||| merged common ancestors
-            <h1>Hello World!</h1>
-=======
-          <Round roundAnswer={this.state.answer} roundChoices={this.state.options}/>
->>>>>>> a885641c4da4904d7b5ff9779df4ff16ba1f0a74
+            <Round roundAnswer={this.state.answer} roundChoices={this.state.options}/>
+          </div>
         );
     }
 }

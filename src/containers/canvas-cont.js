@@ -8,11 +8,13 @@ import Score from '../components/score';
 class CanvasCont extends React.Component {
     render() {
         return (
-          <div>
+          <div style={{width: "60%", backgroundColor: "#ddd", padding: "24", margin: "0"}}>
             <Timer/>
             <Canvas/>
+            <div>
             <Round/>
             <Score/>
+            </div>
           </div>
         );
     }
