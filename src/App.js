@@ -1,5 +1,4 @@
 import React from 'react';
-import CanvasCont from './containers/canvas-cont';
 import Header from './components/header';
 import Round from './containers/round';
 
@@ -53,7 +52,6 @@ class App extends React.Component {
 
       <div>
         <Header/>
-        <CanvasCont/>
         <Round roundChoices={this.state.options}/>
       </div>
 
@@ -66,13 +64,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-// return (
-//     <CanvasCont/>
-//
-// );
-
-// return (
-//
-// );

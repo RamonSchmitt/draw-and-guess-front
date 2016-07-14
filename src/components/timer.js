@@ -2,7 +2,7 @@ import React from 'react';
 
 var Timer = React.createClass({
   getInitialState: function() {
-    return {secondsRemaining: 20};
+    return {secondsRemaining: 10};
   },
 
   tick: function() {

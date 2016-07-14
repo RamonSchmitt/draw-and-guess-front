@@ -1,6 +1,7 @@
 import React from 'react';
 import Choice from '../components/choice';
 import Answer from '../components/answer';
+import Timer from '../components/timer';
 
 class Round extends React.Component {
 
@@ -13,8 +14,9 @@ class Round extends React.Component {
     let newAnswer = this.props.roundChoices[picked].image;
     console.log(newAnswer)
     return (
-      <div>
-
+      <div style={{width: "100%", backgroundColor: "#ddd", padding: "24", margin: "0"}}>
+      <div style={{width: "60%", margin: "0 auto"}}>
+      <Timer/>
         <div>
           <img src = {this.props.roundChoices[picked].image}/>
         </div>
@@ -23,6 +25,7 @@ class Round extends React.Component {
           {this.props.roundChoices.map((choice) => {
              return <Choice key={choice._id} data={choice} />
            })}
+        </div>
         </div>
 
       </div>
