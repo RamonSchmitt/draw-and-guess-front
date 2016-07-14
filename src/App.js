@@ -1,5 +1,5 @@
 import React from 'react';
-import Assignment from './containers/assignment-cont'
+import Round from './containers/round'
 
 class App extends React.Component {
   constructor() {
@@ -13,12 +13,13 @@ class App extends React.Component {
       score: 0,
       roundTime: 20,
       round: 0,
-      drawAssignment: "Dog",
-      guesserChoices: [
-        { answer: "Cat" },
-        { answer: "Dog" },
-        { answer: "Rabbit" },
-        { answer: "Horse" },
+      answer: {option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg" },
+      options: [
+        { option: "Cat", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg" },
+        { option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
+        { option: "Rabbit", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
+        { option: "Horse", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
+
       ]
 
 
@@ -32,7 +33,7 @@ class App extends React.Component {
 
     render() {
         return (
-          <Assignment draw={this.state.player1Draw} assignment={this.state.drawAssignment} guesserAnswers={this.state.guesserChoices}/>
+          <Round roundAnswer={this.state.answer} roundChoices={this.state.options}/>
         );
     }
 }
