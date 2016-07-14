@@ -5,29 +5,41 @@ import Answer from '../components/answer';
 class Round extends React.Component {
 
 
-  renderRoundChoices() {
+  generateAnswer() {
+    let possibleAnswers = this.props.roundChoices
+    console.log(possibleAnswers)
+    let picked = Math.round(Math.random()*possibleAnswers.length)
+    console.log(picked)
+    let newAnswer = this.props.roundChoices[picked].image;
+    console.log(newAnswer)
     return (
       <div>
+
+        <div>
+          <img src = {this.props.roundChoices[picked].image}/>
+        </div>
+
         <div>
           {this.props.roundChoices.map((choice) => {
              return <Choice key={choice._id} data={choice} />
-        })}
+           })}
         </div>
 
-        <div>
-          {this.props.roundChoices.map((answer) => {
-             return <Answer key={answer._id} data={answer} />
-        })}
-        </div>
       </div>
 
-    );
+
+    )
   }
+
+
+
+
+
 
 
   render() {
 
-     return this.renderRoundChoices();
+      return this.generateAnswer();
 
   }
 
