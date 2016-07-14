@@ -1,5 +1,6 @@
-import React from 'react'
-import Choice from '../components/choice'
+import React from 'react';
+import Choice from '../components/choice';
+import Answer from '../components/answer';
 
 class Round extends React.Component {
 
