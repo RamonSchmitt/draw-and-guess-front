@@ -57,7 +57,6 @@ class App extends React.Component {
         <Round roundChoices={this.state.options}/>
       </div>
 
-      console.log("Begin Round = ", this.state.beginRound, "Answer", this.state.answer )
     )
 
 
