@@ -15,10 +15,10 @@ class App extends React.Component {
       beginRound: false,
       answer: null,
       options: [
-        { option: "Cat", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg" },
-        { option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
-        { option: "Rabbit", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
-        { option: "Horse", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
+              { option: "Cat", image: "http://1.bp.blogspot.com/-KuQX1Jiukno/VEa3tE1oDAI/AAAAAAAAdD8/0MB0jBJ2KTI/s1600/cat.gif" },
+              { option: "Dog", image: "http://www.taiwanese-secrets.com/image-files/chinese-symbol-for-dog.jpg"  },
+              { option: "Rabbit", image: "http://chinesecalligraphystore.com/chinese-zodiac-signs/chinese-zodiac-signs-400x/chinese-zodiac-sign-rabbit.gif"  },
+              { option: "Horse", image: "http://scifiportal.eu/wp-content/uploads/2014/01/chinese-zodiac-sign-horse.gif"  },
       ]
     };
   }
