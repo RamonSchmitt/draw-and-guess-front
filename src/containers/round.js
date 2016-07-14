@@ -1,36 +1,45 @@
-import React from 'react'
-import Choice from '../components/choice'
+import React from 'react';
+import Choice from '../components/choice';
+import Answer from '../components/answer';
 
 class Round extends React.Component {
 
-  // renderDrawAssignment() {
-  //     return (
-  //       <div>
-  //         <p> Draw a: {this.props.assignment} </p>
-  //       </div>
-  //   );
-  // }
 
-  renderRoundChoices() {
+  generateAnswer() {
+    let possibleAnswers = this.props.roundChoices
+    console.log(possibleAnswers)
+    let picked = Math.round(Math.random()*possibleAnswers.length)
+    console.log(picked)
+    let newAnswer = this.props.roundChoices[picked].image;
+    console.log(newAnswer)
     return (
       <div>
-        {this.props.roundChoices.map((choice) =>{
-          return <Choice key={choice._id} { ...choice } />
-        })}
+
+        <div>
+          <img src = {this.props.roundChoices[picked].image}/>
+        </div>
+
+        <div>
+          {this.props.roundChoices.map((choice) => {
+             return <Choice key={choice._id} data={choice} />
+           })}
+        </div>
+
       </div>
-    );
+
+
+    )
   }
 
 
 
+
+
+
+
   render() {
-    // let player1 = this.props.draw;
-    // console.log(player1);
 
-
-    // if (player1 === true) {
-    //   return this.renderDrawAssignment();
-     return this.renderRoundChoices();
+      return this.generateAnswer();
 
   }
 
