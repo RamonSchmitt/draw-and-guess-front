@@ -1,4 +1,5 @@
 import React from 'react';
+import CanvasCont from './containers/canvas-cont';
 import Round from './containers/round'
 
 class App extends React.Component {
@@ -68,7 +69,7 @@ class App extends React.Component {
       if (this.state.beginRound == false) {
         return <button onClick={this.startGame.bind(this)}> Start Game </button>
 
-      } return <Round roundAnswer={this.state.answer} roundChoices={this.state.options}/>
+      } return <Round roundChoices={this.state.options}/>
 
       console.log("Begin Round = ", this.state.beginRound, "Answer", this.state.answer )
 
@@ -79,6 +80,10 @@ class App extends React.Component {
 export default App;
 
 
+// return (
+//     <CanvasCont/>
+//
+// );
 
 // return (
 //
